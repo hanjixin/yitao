@@ -30,7 +30,7 @@ var $=jQuery.noConflict();
         var close=$("<p>关闭</p>")
         var username=$("<p><input type='text' placeholder='请输入用户名'></p>")
         var password=$("<p><input type='password' placeholder='请输入密码'></p>")
-        var button=$("<p>登录</p>")
+        var button=$("<p><span>&nbsp;&nbsp;登录&nbsp;&nbsp;</span></p>")
 
         var left=(width-400)/2;
         var top=(height-200)/2;
@@ -75,9 +75,12 @@ var $=jQuery.noConflict();
             }
         );
         button.css({
-            color:"#999",
+            color:"white",
             padding:"10px 0",
         });
+        button.children("span").css({
+            background:"#f41"
+        })
         button.click(function () {
             $.post(PRODUT_HOST+LOGIN,{status:"login",username:username.children().val(),password:password.children().val()},function (data) {
                 console.log(data);
@@ -153,7 +156,7 @@ var $=jQuery.noConflict();
         var close=$("<p>关闭</p>")
         var username=$("<p><input type='text' placeholder='请输入用户名'></p>")
         var password=$("<p><input type='password' placeholder='请输入密码'></p>")
-        var button=$("<p>注册</p>")
+        var button=$("<p><span>&nbsp;&nbsp;注册&nbsp;&nbsp;</span></p>")
 
         var left=(width-400)/2;
         var top=(height-200)/2;
@@ -198,9 +201,12 @@ var $=jQuery.noConflict();
             }
         );
         button.css({
-            color:"#999",
+            color:"white",
             padding:"10px 0",
         });
+        button.children("span").css({
+            background:"#f41"
+        })
         button.click(function () {
             $.post(PRODUT_HOST+LOGIN,{status:"register",username:username.children().val(),password:password.children().val()},function (data) {
                 console.log(data);

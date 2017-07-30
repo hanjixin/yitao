@@ -1,6 +1,7 @@
 /**
  * Created by 韩吉鑫 on 2017/7/29.
  */
+//添加地址界面
 function addrview() {
 
     var creatadd=$("<div class='creatadd'></div>");
@@ -106,8 +107,19 @@ function addrview() {
         new ADDR(PRODUT_HOST+USER_ADDR,obj,function () {
 
         });
-        new LOOKADDR(PRODUT_HOST+USER_ADDR,null,function (result) {
+        new LOOKADDR(PRODUT_HOST+USER_ADDR,null,function (event) {
+            $(this).css({
+                background:"url('image/header/ok.png') no-repeat center",
+                "background-size":"40px 100%"
+            })
+            console.log(event);
+            $(".submit_order_button").click(function () {
+                new DOWNORDER(PRODUT_HOST+PRODUT_ORDER,{address_id:event.data.address_id+"",total_prices:parseInt($(".lgsum").text)+""},function () {
 
+                })
+                $(".detail-container").empty();
+                alert("下单成功");
+            })
         });
         zhenzhao.remove();
 

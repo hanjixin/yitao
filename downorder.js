@@ -1,6 +1,7 @@
 /**
  * Created by 韩吉鑫 on 2017/7/28.
  */
+//下订单
 (function () {
     function DOWNORDER(url,parm,superview,callback) {
         this.url=url;
@@ -13,11 +14,7 @@
     DOWNORDER.prototype.loadData=function () {
 
         var self=this;
-        $.post(this.url+"?token="+localStorage.getItem("token")+"&status=add&debug=1",this.parm,function (result) {
-            console.log(result);
-            self.creatview(result);
 
-        });
 
         // $.post(this.url+"?token=f6778eeeb5eb4fb329c24593710760c4",function (result) {
         //     console.log(result);

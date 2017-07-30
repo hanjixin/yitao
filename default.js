@@ -1,6 +1,7 @@
 /**
  * Created by 韩吉鑫 on 2017/7/24.
  */
+//接口数据
 PRODUT_HOST="http://h6.duchengjiu.top/shop/";
 DEBUG_HOST="192.168.20.48";
 LOGIN="api_user.php";

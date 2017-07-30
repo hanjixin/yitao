@@ -98,8 +98,22 @@ function init() {
      //
      // });
        // status=add&debug=1
+    $(".order").click(function () {
+        if (localStorage.getItem("token")){
+        new LOOKORDER(PRODUT_HOST+PRODUT_ORDER,null);}
+        else {
+            alert("请先登录");
+        }
+    })
+    $(".header-search-logo").click(function () {
+        $(".section-container").show();
+        $(".star").show();
 
-
+        $(".section-container-two-content").show();
+        $(".detail-container").empty();
+        $(".section-container-two-detais").show();
+        $(".section-container-two-head h2").text("热卖商品");
+    })
 
 }
 init();

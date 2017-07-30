@@ -30,6 +30,7 @@
 
     LOOKADDR.prototype.creatview=function (result) {
         var self=this;
+        $(".lookaddr").remove();
            result.data.forEach(function (p1, p2, p3) {
                var look_addr=$("<div class='lookaddr'><span>收件人:"+p1.consignee+"</span>" +
                    "<span>详细收货地址:"+p1.address_name+p1.address+"</span><span>手机号码:"+p1.mobile+"</span><button class='deladdr'></button></div>");
@@ -40,7 +41,7 @@
                        look_addr.remove();
                        console.log(look_addr);
                        new DELADDR(PRODUT_HOST+USER_ADDR,{status:"delete",address_id:p1.address_id,token:""+localStorage.getItem("token")});
-                   alert(111);
+
                    })
               look_addr.on("click",p1,self.callback);
 
@@ -59,7 +60,6 @@
         $(".lookaddr span").css({
             "margin-right":"20px"
         })
-
 
     }
 

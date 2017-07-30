@@ -4,6 +4,7 @@
 /**
  * Created by 韩吉鑫 on 2017/7/26.
  */
+//结算页查看购物车中的物品
 (function () {
     function LOOKCART(url,parm,superview,callback) {
         this.url=url;

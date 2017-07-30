@@ -1,6 +1,7 @@
 /**
  * Created by 韩吉鑫 on 2017/7/28.
  */
+//结算页面
 (function () {
     function BALANCE() {
          this.creatview();
@@ -30,7 +31,7 @@
             })
             console.log(event);
             $(".submit_order_button").click(function () {
-                new DOWNORDER(PRODUT_HOST+PRODUT_ORDER,{address_id:event.data.address_id+"",total_prices:parseInt($(".lgsum").text)+""},function () {
+                new DOWNORDER(PRODUT_HOST+PRODUT_ORDER,{address_id:event.data.address_id+"",total_prices:parseInt($(".lgsum").text().replace("总价："))+""},function () {
 
                 })
                 $(".detail-container").empty();

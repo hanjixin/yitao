@@ -1,6 +1,7 @@
 /**
  * Created by 韩吉鑫 on 2017/7/29.
  */
+//删除地址
 (function () {
     function DELADDR(url,parm) {
         this.url=url;

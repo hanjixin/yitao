@@ -31,7 +31,7 @@
             })
             console.log(event);
             $(".submit_order_button").click(function () {
-                new DOWNORDER(PRODUT_HOST+PRODUT_ORDER,{address_id:event.data.address_id+"",total_prices:parseInt($(".lgsum").text().replace("总价："))+""},function () {
+                new DOWNORDER(PRODUT_HOST+PRODUT_ORDER,{address_id:event.data.address_id+"",total_prices:parseInt($(".lgsum").text())+""},function () {
 
                 })
                 $(".detail-container").empty();

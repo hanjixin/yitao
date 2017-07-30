@@ -14,7 +14,11 @@
     DOWNORDER.prototype.loadData=function () {
 
         var self=this;
+        $.post(this.url+"?token="+localStorage.getItem("token")+"&status=add&debug=1",this.parm,function (result) {
+            console.log(result);
+            self.creatview(result);
 
+        });
 
         // $.post(this.url+"?token=f6778eeeb5eb4fb329c24593710760c4",function (result) {
         //     console.log(result);
